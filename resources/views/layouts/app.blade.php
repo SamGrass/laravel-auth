@@ -18,7 +18,9 @@
         @auth
         @include('admin.partials.aside')
         @endauth
-        @yield('content')
+        <div class="py-2 px-4 content">
+            @yield('content')
+        </div>
     </div>
 </body>
 

@@ -21,8 +21,13 @@ header {
 
 .main-container {
     height: calc(100vh - 60px);
+    overflow: hidden;
     aside {
         width: 200px;
         height: 100%;
+    }
+    .content {
+        width: calc(100vw - 200px);
+        overflow-y: auto;
     }
 }
