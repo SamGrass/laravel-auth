@@ -7,7 +7,7 @@
         {{ session('deleted') }}
     </div>
     @endif
-    <h2>I tuoi Portfoli</h2>
+    <h2>I tuoi Progetti</h2>
     <table class="table">
         <thead>
             <tr>
@@ -19,17 +19,17 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($portfolios as $portfolio)
+            @foreach($projects as $project)
             <tr>
-                <th>{{ $portfolio->id }}</th>
-                <td>{{ $portfolio->name }}</td>
-                <td><img width="15%" class="img-fluid" src="{{ $portfolio->img }}" alt=""></td>
-                <td>{{ $portfolio->created_at->format('d/m/Y') }}</td>
+                <th>{{ $project->id }}</th>
+                <td>{{ $project->name }}</td>
+                <td><img width="15%" class="img-fluid" src="{{ $project->img }}" alt=""></td>
+                <td>{{ $project->created_at->format('d/m/Y') }}</td>
                 <td>
                     <div class="d-flex gap-1">
-                        <a href="{{ route('admin.portfolios.show', $portfolio) }}" class="btn btn-success"><i
+                        <a href="{{ route('admin.projects.show', $project) }}" class="btn btn-success"><i
                                 class="fa-solid fa-eye"></i></a>
-                        <a href="{{ route('admin.portfolios.edit', $portfolio) }}" class="btn btn-warning"><i
+                        <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-warning"><i
                                 class="fa-solid fa-pencil"></i></a>
                         @include('admin.partials.deletebtn')
                     </div>
@@ -38,6 +38,6 @@
             @endforeach
         </tbody>
     </table>
-    {{ $portfolios->links() }}
+    {{ $projects->links() }}
 </div>
 @endsection

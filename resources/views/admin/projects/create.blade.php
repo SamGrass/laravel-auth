@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="py-2 px-4">
-    <h2>Aggiungi il tuo nuovo portfolio</h2>
-    <form action="{{ route('admin.portfolios.store') }}" method="POST">
+    <h2>Aggiungi il tuo nuovo project</h2>
+    <form action="{{ route('admin.projects.store') }}" method="POST">
         @csrf
 
         @if($errors->any())

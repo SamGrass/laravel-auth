@@ -8,17 +8,17 @@
     </div>
     @endif
     <div class="d-flex gap-2">
-        <h2>Dettagli del Portfolio: {{ $portfolio->name }}</h2>
+        <h2>Dettagli del Project: {{ $project->name }}</h2>
         <div>
-            <a href="{{ route('admin.portfolios.edit', $portfolio) }}" class="btn btn-warning"><i
+            <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-warning"><i
                     class="fa-solid fa-pencil"></i></a>
         </div>
         @include('admin.partials.deletebtn')
     </div>
 
-    <p>Creato il: {{ $portfolio->created_at->format('d/m/Y') }}</p>
-    <img class="img-fluid" src="{{ $portfolio->img }}" alt="">
+    <p>Creato il: {{ $project->created_at->format('d/m/Y') }}</p>
+    <img class="img-fluid" src="{{ $project->img }}" alt="">
     <h3>Descrizione</h3>
-    <p>{{ $portfolio->description }}</p>
+    <p>{{ $project->description }}</p>
 </div>
 @endsection
